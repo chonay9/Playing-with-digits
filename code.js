@@ -5,8 +5,7 @@ function digPow(n, p){
   for (var i=0;i<digits.length;i++){
     resultado=resultado+(Math.pow(parseInt(digits[i]),(p+i)));
   }
-  console.log(resultado);
-  var compare = resultado / parseInt(n);
+  var compare = Math.trunc(resultado / parseInt(n));
   if(resultado==(parseInt(n)*compare)){
     return compare;
   }
